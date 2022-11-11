@@ -4,52 +4,48 @@
 int main (){
 	printf("hi.\n");
 
-	int num1 = 0;
-	int *p1;
+	float num1 = 0;
+	float *p1;
 	p1 = &num1;
 
-	int num2 = 0;
-	int *p2;
+	float num2 = 0;
+	float *p2;
 	p2 = &num2;
 
-	int result = 0;
-	int *pr;
+	float result = 0.0;
+	float *pr;
 	pr = &result;
 
 	char operration = '*';
 	char *po;
 	po = &operration;
-
-	printf("%d | %d | %d| %c\n", *p1, *p2, *pr , *po);
 	
 	printf("1.sayi: ");
-	scanf("%p", p1);
+	scanf("%f", p1);
 	
 	printf("2.sayi: ");
-	scanf("%p", p2);
+	scanf("%f", p2);
 	
 	printf("operration: ");
-	scanf("%s", &operration);
-	
-	
+	scanf("%s",po);
+
 	if(*po == '+'){
-		result = *p1 + *p2;
-		printf("\n sonuc: %d ", *pr);
+		*pr = *p1 + *p2;
+		printf("\nsonuc: %d ", result);
 	}else if(*po == '-'){
-		result = *p1 - *p2;
-		printf("\n sonuc: %d ", *pr);
+		*pr = *p1 - *p2;
+		printf("\nsonuc: %f ", result);
 	}else if(*po == '*'){
-		result = *p1 * *p2;
-		printf("\n sonuc: %d ", *pr);
+		*pr = *p1 * *p2;
+		printf("\nsonuc: %f ", result);
 	}else if(*po == '/'){
-		result = *p1 / *p2;
-		printf("\n sonuc: %d ", *pr);
+		*pr = *p1 / *p2;
+		printf("\nsonuc: %f ", result);
 	}else{
 		printf("Hata");
-	}
-	printf("%d | %d | %d | %c\n", num1, num2, result, operration );
+	}	
+
+	scanf("%p", p1);
+
 	return 0;
-
 }
-
-
